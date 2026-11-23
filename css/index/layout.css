@@ -1,0 +1,26 @@
+/* ESTRUTURA DAS PÁGINAS */
+
+/* Container da Home (index) */
+.principal {
+    width: 200%;
+    max-width: 1200px;
+    margin: 40px auto;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #fafafa;
+    border: 1px solid #f0f0f0;
+}
+
+/* Container do Sobre (sobre) */
+.container {
+    max-width: 2200px;
+    margin: 0 auto;
+    padding: clamp(30px, 5vw, 80px) 20px;
+}
+
+@media (max-width: 768px) {
+    .principal {
+        width: 95%;
+        margin: 20px auto;
+    }
+}

@@ -1,0 +1,58 @@
+/* BOTÕES E CARDS REUTILIZÁVEIS */
+.destaque {
+    margin: 25px 0;
+    padding: 15px;
+    border: 1px solid #f0e6c8;
+    background-color: #fffdf7;
+    color: #b38f28;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.botao-reservar {
+    padding: 12px 28px;
+    border: 1px solid #d4af37;
+    border-radius: 30px;
+    background-color: #d4af37;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.botao-reservar:hover {
+    background-color: #b38f28;
+    border-color: #b38f28;
+}
+
+.botao-instagram {
+    font-size: 13px;
+    color: #333333;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.botao-instagram:hover {
+    color: #d4af37;
+}
+
+.instagram-circulo {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #d4af37;
+    border-radius: 50%;
+    color: #d4af37;
+    text-decoration: none;
+    font-size: 22px;
+    transition: 0.3s;
+}
+
+.instagram-circulo:hover {
+    background-color: #d4af37;
+    color: #ffffff;
+}

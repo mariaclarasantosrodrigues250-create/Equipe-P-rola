@@ -1,0 +1,122 @@
+/* ==========================================================================
+   FONTES OFICIAIS
+   Link corrigido para carregar as fontes elegantes sem travar o site.
+   ========================================================================== */
+
+
+/* ==========================================
+   CONFIGURAÇÃO DA BARRA DE NAVEGAÇÃO FIXED
+   ========================================== */
+.cabecalho {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 2.5% 5%; /* Altura maior e idêntica para todas as páginas */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(69, 14, 26, 0.96); /* Cor vinho oficial */
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* ==========================================
+   ESTILO DA LOGO (LADO ESQUERDO)
+   ========================================== */
+.logo {
+    text-align: left;
+    color: #fcfbfa;
+}
+
+.logo h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px; /* Padronizado para o tamanho delicado de 22px */
+    font-weight: 400;
+    letter-spacing: 4px;
+    line-height: 1.1;
+}
+
+/* ==========================================
+   MENU DE LINKS (LADO DIREITO)
+   ========================================== */
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 35px; /* Espaço entre cada link */
+    list-style: none;
+}
+
+.menu a {
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.8);
+    transition: all 0.3s ease;
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Efeito Hover e Link Ativo */
+.menu a:hover, .menu a.ativo {
+    color: #e0b0be;
+}
+
+/* Linha fina que surge embaixo ao passar o mouse */
+.menu a::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: #e0b0be;
+    transition: width 0.3s ease;
+}
+
+.menu a:hover::after, .menu a.ativo::after {
+    width: 100%;
+}
+
+/* ==========================================
+   ÍCONE DO INSTAGRAM (CIRCULAR)
+   ========================================== */
+.menu .icone-instagram {
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%; /* Botão redondo padrão */
+    background: rgb(255, 255, 255);
+    color: #ffffff;
+    font-size: 16px;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border: none; /* Remove bordas quadradas antigas */
+}
+
+.menu .icone-instagram:hover {
+    background-color: #f5e7eb;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* ==========================================
+   RESPONSIVIDADE (DISPOSITIVOS MÓVEIS)
+   ========================================== */
+@media (max-width: 768px) {
+    .cabecalho {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 5%;
+    }
+
+    .menu {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0;
+    }
+}

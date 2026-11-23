@@ -1,0 +1,295 @@
+/* ==========================================================================
+   FONTES OFICIAIS
+   Importa as fontes Montserrat e Playfair Display direto do Google Fonts.
+   ========================================================================== */
+
+
+/* ==========================================
+   RESET E CONFIGURAÇÕES GERAIS
+   Zera as margens padrões do navegador para evitar quebras visuais.
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Garante que padding e border não alterem o tamanho total do elemento */
+    -webkit-font-smoothing: antialiased; /* Suaviza as fontes em navegadores baseados em Chrome/Safari */
+    -moz-osx-font-smoothing: grayscale; /* Suaviza as fontes no Firefox */
+}
+
+html {
+    scroll-behavior: smooth; /* Deixa a rolagem da página suave ao clicar em links internos */
+}
+
+body {
+    background: radial-gradient(circle at top right, #fbf4f6, #f7ecef 40%, #ffffff 100%); /* Fundo degradê suave */
+    font-family: 'Montserrat', sans-serif;
+    color: #2c2523;
+    overflow-x: hidden; /* Evita que a página crie uma barra de rolagem horizontal indesejada */
+    padding-top: 100px; /* Cria um espaço no topo para o conteúdo não sumir debaixo do menu fixo */
+}
+
+/* ==========================================
+   CABEÇALHO (BARRA DE NAVEGAÇÃO FIXA)
+   ========================================== */
+.cabecalho {
+    position: fixed; /* Mantém o menu sempre grudado no topo da tela ao rolar */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Garante que o menu fique por cima de qualquer outro elemento ou imagem */
+    padding: 1.5% 5%; /* Espaçamento interno para deixar o menu respirar */
+    display: flex; /* Alinha a logo de um lado e o menu do outro */
+    align-items: center; /* Centraliza os itens verticalmente */
+    justify-content: space-between; /* Empurra a logo para a esquerda e os links para a direita */
+    background-color: rgba(69, 14, 26, 0.96); /* Cor vinho com uma leve transparência elegante */
+    backdrop-filter: blur(10px); /* Cria o efeito de vidro fosco no fundo do menu */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08); /* Sombra bem leve abaixo do menu */
+}
+
+/* ESTILO DA LOGO (LADO ESQUERDO) */
+.logo {
+    text-align: left;
+    color: #fcfbfa;
+}
+
+.logo span {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 10px; /* Pequeno texto complementar acima da logo */
+    letter-spacing: 1px;
+    color: #e0b0be;
+}
+
+.logo h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px; /* Tamanho reduzido para o "K SALON HAIR" */
+    font-weight: 400;
+    letter-spacing: 4px; /* Espaço elegante entre as letras */
+    line-height: 1.1;
+}
+
+.logo small {
+    display: block;
+    margin-top: 4px;
+    font-size: 9px;
+    letter-spacing: 3px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* MENU DE NAVEGAÇÃO (LADO DIREITO) */
+.menu {
+    display: flex; /* Alinha os links um ao lado do outro */
+    align-items: center;
+    gap: 35px; /* Espaçamento de 35px entre cada palavra do menu */
+    list-style: none; /* Remove as bolinhas da lista */
+}
+
+.menu a {
+    text-decoration: none; /* Remove o sublinhado padrão dos links */
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase; /* Deixa o texto em caixa alta */
+    color: rgba(255, 255, 255, 0.8); /* Cor branca com opacidade leve */
+    transition: all 0.3s ease; /* Transição suave nas cores */
+    position: relative;
+}
+
+/* Cor que aparece ao passar o mouse ou no menu da página atual */
+.menu a:hover, .menu a.ativo {
+    color: #e0b0be;
+}
+
+/* Cria a linha fina oculta para o efeito de sublinhado */
+.menu a::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: #e0b0be;
+    transition: width 0.3s ease; /* Animação da linha expandindo */
+}
+
+/* Mostra a linha fina preenchida ao passar o mouse ou na página ativa */
+.menu a:hover::after, .menu a.ativo::after {
+    width: 100%;
+}
+
+/* ÍCONE DO INSTAGRAM CIRCULAR */
+.menu .icone-instagram {
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%; /* Torna o fundo do ícone perfeitamente redondo */
+    background: rgba(255, 255, 255, 0.05); /* Fundo branco quase invisível */
+    color: #ffffff;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/* Efeito ao passar o mouse no Instagram */
+.menu .icone-instagram:hover {
+    background-color: #e0b0be;
+    color: #450e1a;
+    transform: translateY(-2px); /* Faz o ícone subir levemente */
+}
+
+/* ==========================================
+   CONTEÚDO PRINCIPAL & VITRINE DE SERVIÇOS
+   ========================================== */
+.galeria-editorial {
+    width: min(1400px, 90%); /* Limita a largura máxima em telas grandes */
+    margin: 0 auto; /* Centraliza o bloco na tela */
+    padding: 20px 0 120px; /* Reduzido no topo para aproximar o título do menu */
+}
+
+.titulo-secao {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.titulo-secao h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    font-weight: 400;
+    color: #450e1a;
+    margin-bottom: 10px;
+}
+
+.titulo-secao p {
+    font-size: 15px;
+    color: #7a6e6b;
+    font-weight: 300;
+}
+
+/* GRID RESPONSÁVEL POR ALINHAR OS CARDS */
+.vitrine-imagens-puras {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Quebra os cards em linhas novas sozinho se a tela encolher */
+    gap: 35px;
+}
+
+/* CARDS DE CADA SERVIÇO */
+.item-colecao {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border-radius: 20px;
+    overflow: hidden; /* Garante que a foto respeite os cantos arredondados */
+    box-shadow: 0 10px 30px rgba(69, 14, 26, 0.03); /* Sombra elegante e sutil */
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/* Efeito flutuante ao passar o mouse no card */
+.item-colecao:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(69, 14, 26, 0.06), 0 0 20px rgba(224, 176, 190, 0.15);
+}
+
+/* MOLDURA PARA CORTE DA FOTO (PROPORÇÃO 3:4) */
+.moldura-alta-fidelidade {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+}
+
+.foto-nativa {
+    width: 100%;
+    height: 100%;
+    display: block;
+    transition: transform 0.4s ease; /* Suaviza o efeito de zoom na imagem */
+}
+
+/* Efeito de zoom na foto ao passar o mouse no card */
+.item-colecao:hover .foto-nativa {
+    transform: scale(1.06);
+}
+
+/* DETALHES TEXTUAIS DENTRO DO CARD */
+.legenda-editorial {
+    padding: 30px 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex-grow: 1; /* Faz as caixas de texto terem tamanhos iguais mesmo com textos diferentes */
+    background: linear-gradient(to bottom, #ffffff, #fffcfd);
+}
+
+.numero-servico {
+    font-family: 'Playfair Display', serif;
+    font-size: 13px;
+    color: #e0b0be;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+.legenda-editorial h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 500;
+    color: #450e1a;
+}
+
+.legenda-editorial p {
+    font-size: 14px;
+    color: #615653;
+    line-height: 1.6;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+/* BOTÃO DE AGENDAMENTO COM EFEITO GLOW */
+.link-agendamento {
+    margin-top: auto; /* Empurra o botão sempre para a base do card */
+    align-self: flex-start;
+    text-decoration: none;
+    color: #450e1a;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 4px 0;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+/* Tracinho abaixo do botão */
+.link-agendamento::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background-color: #450e1a;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/* Efeitos ao passar o mouse sobre o botão */
+.item-colecao:hover .link-agendamento {
+    color: #912740;
+    text-shadow: 0 0 10px rgba(224, 176, 190, 0.6);
+}
+
+.item-colecao:hover .link-agendamento::after {
+    width: 100%;
+    background-color: #e0b0be;
+    box-shadow: 0 0 8px #e0b0be;
+}
+
+/* ==========================================
+   RODAPÉ (FOOTER)
+   ========================================== */
+.rodape {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #450e1a;
+    color: rgb(255, 255, 255);
+    font-size: 13px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}

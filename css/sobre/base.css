@@ -1,0 +1,29 @@
+/* RESET E TIPOGRAFIA BÁSICA */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+    /* Degradê de 3 cores: Vermelho -> Vinho/Roxo -> Azul Escuro/Preto */
+    background: linear-gradient(135deg, #fabdd89c ,  #ffffff , #e7afba );
+    
+    /* Garante que o degradê cubra toda a altura do ecrã sem repetir */
+    min-height: 100vh;
+    margin: 0;
+    background-attachment: fixed;
+    
+    /* Configurações de texto */
+    color: #ffffff; 
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+
+a {
+    color: inherit;
+}

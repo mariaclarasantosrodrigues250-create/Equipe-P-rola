@@ -1,0 +1,26 @@
+/* RESET E TIPOGRAFIA BÁSICA */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    /* Degradê de 3 cores: Vermelho -> Vinho/Roxo -> Azul Escuro/Preto */
+    background: linear-gradient(135deg, #efd6e1 ,  #ffffff, #e1bcc3 );
+}
+body {
+    padding-top: 130px; /* Evita que a foto do salão suma embaixo da nav */
+}
+
+
+
+
+
+a {
+    color: inherit;
+}

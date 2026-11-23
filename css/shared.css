@@ -1,0 +1,57 @@
+body{font-family:Montserrat,Arial,sans-serif;min-height:100vh;display:flex;flex-direction:column;padding-top:120px}main{flex:1}.cabecalho{padding:26px 5%;min-height:90px}.menu{margin:0;padding:0;list-style:none;display:flex;align-items:center;gap:28px}.menu .icone-instagram{display:flex;align-items:center;justify-content:center;background:transparent;color:#fff;padding:8px}.menu .icone-instagram:hover{color:#450e1a;background:#f5e7eb}.principal{width:calc(100% - 48px);max-width:1200px}.pagina-contato{width:100%;max-width:1200px;margin:20px auto 60px}.container-contato{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:stretch}.info-contato,.mapa-container{min-width:0}.mapa-container iframe{display:block;min-height:420px;width:100%;height:100%}.whatsapp-contato{display:inline-flex;align-items:center;gap:10px;text-decoration:none}.whatsapp-contato svg{flex-shrink:0}.whatsapp-contato:hover{text-decoration:underline}a:focus-visible,button:focus-visible{outline:3px solid #b15570;outline-offset:4px}#alto-contraste{position:fixed;right:10px;top:calc(50% + 52px);z-index:99999;display:grid;place-items:center;width:44px;height:44px;padding:0;border:2px solid #fff;border-radius:9px;background:#450e1a;color:white;cursor:pointer;box-shadow:0 2px 8px #0004}html.alto-contraste,html.alto-contraste body,html.alto-contraste body *:not(svg):not(svg *){background:#000!important;color:#fff!important;border-color:#fff!important;box-shadow:none!important;text-shadow:none!important}html.alto-contraste a,html.alto-contraste a *{color:#ffeb00!important}html.alto-contraste a:focus-visible,html.alto-contraste button:focus-visible{outline-color:#ffeb00!important}html.alto-contraste img{background:transparent!important}html.alto-contraste #alto-contraste{border-color:#ffeb00!important}@media(max-width:800px){body{padding-top:150px}.cabecalho{flex-direction:column;gap:18px;padding:20px 12px}.menu{gap:14px;flex-wrap:wrap;justify-content:center}.menu a{font-size:11px;letter-spacing:.6px}.container-contato{grid-template-columns:1fr}.pagina-contato{padding:0 20px}.mapa-container{height:340px}.mapa-container iframe{min-height:340px}.principal{width:calc(100% - 32px)}}
+/* Escala visual mais compacta em todas as páginas. */
+body{padding-top:94px}
+.cabecalho{min-height:72px;padding:17px 5%}
+.logo h1{font-size:20px;letter-spacing:3px}
+.menu{gap:24px}
+.principal{max-width:1040px;margin:24px auto}
+.imagem-salao{min-height:360px;min-width:0}
+.lado-direito{min-width:0;padding:30px;gap:24px}
+.texto-apresentacao h2{font-size:32px}
+.texto-apresentacao p{font-size:16px;line-height:1.6}
+.container{width:100%;max-width:1040px;padding:24px 24px 36px}
+.about-section{gap:32px;margin-bottom:20px}
+.about-text h2{font-size:34px;margin-bottom:20px}
+.about-text p{font-size:16px;line-height:1.7;margin-bottom:16px}
+.about-image img{width:100%;max-height:400px;object-fit:contain;border-radius:24px}
+.galeria-editorial{width:calc(100% - 48px);max-width:1120px;padding:14px 0 44px}
+.titulo-secao{margin-bottom:28px}
+.titulo-secao h1,.titulo-secao h2{font-size:34px}
+.vitrine-imagens-puras{grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.legenda-editorial{padding:20px 18px;gap:10px}
+.legenda-editorial h3{font-size:21px}
+.legenda-editorial p{margin-bottom:12px}
+.link-agendamento{font-size:12px;letter-spacing:.8px}
+.pagina-contato{max-width:1040px;margin:14px auto 36px;padding:0 24px}
+.container-contato{gap:24px;margin-top:22px}
+.info-contato{padding:26px}
+.info-contato h2{font-size:22px;margin-bottom:18px}
+.item-info{margin-bottom:16px}
+.mapa-container{min-height:350px}
+.mapa-container iframe{min-height:350px}
+footer,.rodape{padding:24px 20px;font-size:12px}
+@media(min-width:601px) and (max-width:950px){.vitrine-imagens-puras{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:800px){body{padding-top:126px}.cabecalho{padding:15px 12px;gap:12px}.menu{gap:14px}.principal{margin:16px auto}.texto-apresentacao h2{font-size:28px}.imagem-salao,.lado-direito{flex-basis:100%}.imagem-salao{min-height:260px;max-height:340px}.lado-direito{padding:24px}.about-text,.about-image{min-width:0;flex-basis:100%}.about-text h2{font-size:30px}.about-image img{max-height:340px}.titulo-secao h1,.titulo-secao h2{font-size:30px}.mapa-container{height:320px;min-height:320px}.mapa-container iframe{min-height:320px}}
+@media(max-width:600px){.vitrine-imagens-puras{grid-template-columns:1fr}.galeria-editorial{max-width:420px}.moldura-alta-fidelidade{aspect-ratio:1/1}.foto-nativa{object-fit:cover}}
+
+.whatsapp-contato svg{color:#128c4a}
+.whatsapp-contato>a{display:inline-flex;align-items:center;color:#128c4a;text-decoration:none}
+
+/* WhatsApp flutuante exclusivo da página de contato. */
+.whatsapp-flutuante{position:fixed;right:20px;bottom:24px;z-index:1001;width:58px;height:58px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:#128c4a;color:#fff;text-decoration:none;box-shadow:0 4px 16px #0003;transition:background .2s,transform .2s}
+.whatsapp-flutuante:hover{background:#0b713a;transform:translateY(-3px)}
+/* Mantém o retrato inteiro, na proporção original, sem recorte. */
+.about-section{align-items:center;gap:44px}
+.about-image{display:flex;justify-content:center;overflow:visible;padding:12px;min-width:0}
+.about-image img{display:block;width:100%;max-width:360px;height:auto;max-height:none;aspect-ratio:auto;object-fit:contain;object-position:center;border-radius:12px;box-shadow:0 8px 26px #450e1a18;border:1px solid #e5ced5}
+@media(max-width:800px){.about-section{gap:24px}.about-image{padding:0 8px}.about-image img{max-width:340px;max-height:none;height:auto}.whatsapp-flutuante{right:16px;bottom:20px;width:54px;height:54px}}
+/* Ajuste final de tamanho dos controles e do retrato. */
+.whatsapp-flutuante{width:44px;height:44px;right:10px;bottom:20px}
+.whatsapp-flutuante svg{width:25px;height:25px}
+.about-image img{width:min(100%,300px);max-width:300px;height:auto;max-height:none;border-radius:8px}
+@media(min-width:801px){.about-image img{width:min(300px,calc(100vh - 220px));max-width:100%;height:auto}.about-image{padding:8px}.about-section{gap:32px}}
+@media(max-width:800px){.about-image img{width:min(100%,280px,65svh);max-width:280px;height:auto;max-height:none}.whatsapp-flutuante{width:44px;height:44px;right:10px;bottom:20px}}
+/* Retrato maior, preservando integralmente o arquivo original. */
+.about-image img{width:100%;max-width:440px;height:auto;max-height:none;object-fit:contain;aspect-ratio:auto}
+@media(min-width:801px){.about-image{flex:1.15}.about-image img{width:100%;max-width:440px;height:auto;max-height:none}}
+@media(max-width:800px){.about-image img{width:100%;max-width:400px;height:auto;max-height:none}}
